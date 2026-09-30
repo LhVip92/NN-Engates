@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>N&N Engates | Fabricação de Engates em Fortaleza - CE</title>
-    <meta name="description" content="Há mais de 20 anos fabricando engates para veículos nacionais e importados. Registro INMETRO, qualidade e segurança. Loja e fábrica em Fortaleza." />
-    <link rel="canonical" href="https://www.nnengates.com.br/" />
+    <title>N&N Engates | Há 25 anos fabricando engates em Fortaleza - CE</title>
+    <meta name="description" content="N&N Engates: há 25 anos fabricando engates para veículos nacionais e importados em Fortaleza. Fabricação própria, qualidade, segurança e registro INMETRO." />
+    <link rel="canonical" href="https://nnengates.com.br/" />
     <meta property="og:title" content="N&N Engates - Fabricação de Engates" />
-    <meta property="og:description" content="Há mais de 20 anos fabricando engates para veículos nacionais e importados." />
-    <meta property="og:image" content="https://www.nnengates.com.br/img/logo-nn.png" />
+    <meta property="og:description" content="Há 25 anos fabricando engates para veículos nacionais e importados. Registro INMETRO, qualidade e segurança." />
+    <meta property="og:image" content="https://nnengates.com.br/img/logo-nn.png" />
+    <meta property="og:url" content="https://nnengates.com.br/" />
+    <meta property="og:site_name" content="N&N Engates" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "N&N Engates",
       "description": "Fabricação de engates para veículos nacionais e importados.",
+      "url": "https://nnengates.com.br/",
+      "image": "https://nnengates.com.br/img/logo-nn.png",
+      "sameAs": ["https://instagram.com/nnengate"],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Luís Vieira, 596-A - Vila Pery",
@@ -25,7 +31,20 @@
         "addressCountry": "BR"
       },
       "telephone": "+558532925645",
-      "openingHours": "Mo-Fr 08:00-17:00, Sa 08:00-12:00"
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ]
     }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,7 +53,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
-<body class="overflow-x-hidden">
+<body>
 
     <!-- ===== HEADER ===== -->
     <header class="bg-[#0A3D62] text-white py-3 px-6 flex justify-between items-center fixed w-full top-0 z-50 shadow-lg">
@@ -42,7 +61,7 @@
             <img src="img/logo-nn.png" alt="N&N Engates" class="h-10 w-auto" />
             <span class="text-2xl font-extrabold tracking-tight">N&N <span class="text-[#4FC3F7]">ENGATES</span></span>
         </div>
-        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <nav class="hidden md:flex space-x-8 text-sm font-medium" aria-label="Menu principal">
             <a href="#home" class="hover:text-[#4FC3F7] transition">Início</a>
             <a href="#categorias" class="hover:text-[#4FC3F7] transition">Categorias</a>
             <a href="#destaques" class="hover:text-[#4FC3F7] transition">Destaques</a>
@@ -52,17 +71,17 @@
             <a href="#contato" class="hover:text-[#4FC3F7] transition">Contato</a>
         </nav>
         <div class="flex items-center space-x-4">
-            <a href="https://instagram.com/nnengate" target="_blank" class="text-pink-500 hover:text-pink-400 text-xl">
-                <i class="fab fa-instagram"></i>
+            <a href="https://instagram.com/nnengate" target="_blank" rel="noopener noreferrer" class="text-pink-500 hover:text-pink-400 text-xl" aria-label="Instagram da N&N Engates">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://wa.me/5585999874410?text=Olá!%20Gostaria%20de%20um%20orçamento" target="_blank" class="text-green-500 hover:text-green-400 text-xl">
-                <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/5585999874410?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-400 text-xl" aria-label="WhatsApp da N&N Engates">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
             </a>
-            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
+            <button id="menu-toggle" type="button" class="md:hidden text-white text-2xl focus:outline-none" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
         </div>
-        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-[#0A3D62] border-t border-blue-800 md:hidden">
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-[#0A3D62] border-t border-blue-800 md:hidden" hidden>
             <a href="#home" class="block px-6 py-3 hover:bg-[#1E4D7B]">Início</a>
             <a href="#categorias" class="block px-6 py-3 hover:bg-[#1E4D7B]">Categorias</a>
             <a href="#destaques" class="block px-6 py-3 hover:bg-[#1E4D7B]">Destaques</a>
@@ -73,309 +92,312 @@
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
-    <section id="home" class="h-screen flex items-center justify-center text-white text-center relative overflow-x-hidden" style="background: linear-gradient(135deg, #0A3D62 0%, #1E4D7B 100%);">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-[0.03] z-0 pointer-events-none text-8xl md:text-9xl font-extrabold text-white whitespace-nowrap select-none">
-            N&N
-        </div>
-        <div class="px-6 relative z-10 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
-            <div class="flex justify-center mb-6">
-                <span class="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
-                    N&N <span class="text-[#4FC3F7]">ENGATES</span>
-                </span>
-            </div>
-            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-                Há mais de <span class="text-[#4FC3F7]">20 anos</span> fabricando engates.
-            </h1>
-            <p class="text-2xl md:text-3xl font-light mt-2 text-gray-200">
-                Para veículos nacionais e importados
-            </p>
-            <div class="mt-6 flex flex-wrap justify-center items-center gap-3 text-lg">
-                <span class="bg-[#4FC3F7] text-[#0A3D62] px-4 py-1.5 rounded-full text-sm font-semibold inline-flex items-center gap-1">
-                    <i class="fas fa-check-circle"></i> +20 anos de experiência
-                </span>
-                <span class="text-gray-300 hidden sm:inline">•</span>
-                <span class="bg-[#1E4D7B] text-white px-4 py-1.5 rounded-full text-sm font-semibold inline-flex items-center gap-1">
-                    <i class="fas fa-industry"></i> Fabricação própria
-                </span>
-                <span class="text-gray-300 hidden sm:inline">•</span>
-                <span class="bg-[#1E4D7B] text-white px-4 py-1.5 rounded-full text-sm font-semibold inline-flex items-center gap-1">
-                    <i class="fas fa-certificate"></i> INMETRO
-                </span>
-            </div>
-            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contato" class="bg-[#4FC3F7] hover:bg-[#38B0E3] text-[#0A3D62] font-semibold px-8 py-4 rounded-full text-lg transition shadow-lg">
-                    Solicitar orçamento
-                </a>
-                <a href="#categorias" class="border border-white hover:bg-white hover:text-[#0A3D62] text-white font-semibold px-8 py-4 rounded-full text-lg transition">
-                    Ver modelos
-                </a>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <!-- ===== CATEGORIAS ===== -->
-    <section id="categorias" class="py-20 px-6 bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-center mb-8">
-                <span class="bg-[#4FC3F7] text-[#0A3D62] py-2 px-6 rounded-full text-sm font-bold flex items-center gap-2 shadow-md animate-pulse">
-                    <i class="fas fa-star"></i> NOVIDADE EM ESTOQUE: Acessórios para sua carroça!
-                </span>
+        <!-- ===== HERO ===== -->
+        <section id="home" class="min-h-screen min-h-[100svh] flex items-center justify-center text-white text-center relative pt-24 pb-12" style="background: linear-gradient(135deg, #0A3D62 0%, #1E4D7B 100%);">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-[0.03] z-0 pointer-events-none text-8xl md:text-9xl font-extrabold text-white whitespace-nowrap select-none" aria-hidden="true">
+                N&N
             </div>
-            <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Encontre o engate para seu veículo</h2>
-            <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Selecione o modelo para consultar as opções disponíveis</p>
-            <div id="categories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"></div>
-            <div id="category-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
-                <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 relative max-h-[80vh] overflow-y-auto">
-                    <button id="close-modal" class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl">&times;</button>
-                    <h3 id="modal-title" class="text-2xl font-bold mb-4 text-[#0A3D62]">Produtos</h3>
-                    <ul id="modal-products" class="space-y-4 text-gray-700"></ul>
-                    <div class="mt-6 text-center text-sm text-gray-500">
-                        <i class="fas fa-info-circle text-[#4FC3F7] mr-1"></i> Informe o ano/modelo do veículo para confirmar a aplicação.
-                    </div>
+            <div class="px-6 relative z-10 max-w-4xl" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex justify-center mb-6">
+                    <span class="text-3xl md:text-5xl font-extrabold tracking-tight text-white">
+                        N&N <span class="text-[#4FC3F7]">ENGATES</span>
+                    </span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== DESTAQUES ===== -->
-    <section id="destaques" class="py-20 px-6 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Produtos em Destaque</h2>
-            <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Os mais procurados pelos nossos clientes</p>
-            <div id="destaques-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
-        </div>
-    </section>
-
-    <!-- ===== ACESSÓRIOS ===== -->
-    <section id="acessorios" class="py-20 px-6 bg-gray-100">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Acessórios</h2>
-            <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Complementos para seu veículo – qualidade N&N</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Card 1: Cambão para Jipe -->
-                <div class="product-card" data-aos="fade-up">
-                    <div class="w-full h-48 bg-gray-100 overflow-hidden">
-                        <img src="img/produtos/camboes/cambao-jipe.jpg" alt="Cambão para Jipe" class="w-full h-full object-cover object-center" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-[#0A3D62]">Cambão para Jipe</h3>
-                        <p class="text-gray-600 text-sm mt-1">Reboque reforçado, ideal para trilhas</p>
-                        <a href="#contato" class="mt-3 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm transition">Consultar produto</a>
-                    </div>
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+                    Há <span class="text-[#4FC3F7]">25 anos</span> fabricando engates.
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mt-2 text-gray-200">
+                    Para veículos nacionais e importados
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center items-center gap-3 text-lg">
+                    <span class="bg-[#4FC3F7] text-[#0A3D62] px-4 py-1.5 rounded-full text-sm font-semibold inline-flex items-center gap-1">
+                        <i class="fas fa-check-circle" aria-hidden="true"></i> 25 anos de experiência
+                    </span>
+                    <span class="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
+                    <span class="bg-[#1E4D7B] text-white px-4 py-1.5 rounded-full text-sm font-semibold inline-flex items-center gap-1">
+                        <i class="fas fa-industry" aria-hidden="true"></i> Fabricação própria
+                    </span>
+                    <span class="text-gray-300 hidden sm:inline" aria-hidden="true">•</span>
+                    <span class="bg-[#1E4D7B] text-white px-4 py-1.5 rounded-full text-sm font-semibold inline-flex items-center gap-1">
+                        <i class="fas fa-certificate" aria-hidden="true"></i> INMETRO
+                    </span>
                 </div>
-                <!-- Card 2: Kit Inox -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-full h-48 bg-gray-100 overflow-hidden">
-                        <img src="img/produtos/inox/kit-inox.jpg" alt="Kit Inox" class="w-full h-full object-cover object-center" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-[#0A3D62]">Kit Inox</h3>
-                        <p class="text-gray-600 text-sm mt-1">Acabamento premium, resistente à corrosão</p>
-                        <a href="#contato" class="mt-3 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm transition">Consultar produto</a>
-                    </div>
-                </div>
-                <!-- Card 3: Estribo de Alumínio -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-full h-48 bg-gray-100 overflow-hidden">
-                        <img src="img/produtos/estribos/estribo-aluminio.jpg" alt="Estribo de Alumínio" class="w-full h-full object-cover object-center" />
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold text-[#0A3D62]">Estribo de Alumínio</h3>
-                        <p class="text-gray-600 text-sm mt-1">Leve e resistente, para diversos modelos</p>
-                        <a href="#contato" class="mt-3 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm transition">Consultar produto</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SOBRE ===== -->
-    <section id="sobre" class="py-20 px-6 bg-[#0A3D62] text-white">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-4xl font-bold mb-6">Sobre a N&N Engates</h2>
-                    <p class="text-gray-200 leading-relaxed mb-4">
-                        <strong class="text-[#4FC3F7]">Há mais de 20 anos</strong>, a N&N constrói sua história no mercado de engates e acessórios automotivos. 
-                        Somos referência na fabricação para veículos nacionais e importados, com produtos registrados no <strong class="text-[#4FC3F7]">INMETRO</strong> (nº 001718/2024) e rigoroso controle de qualidade.
-                    </p>
-                    <p class="text-gray-200 leading-relaxed mb-6">
-                        Atendemos com excelência, oferecendo desde engates fixos e removíveis até acessórios para carroças e soluções elétricas. 
-                        Temos <strong class="text-[#4FC3F7]">sala de espera</strong> para nossos clientes e uma equipe preparada para orientar na melhor escolha.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 text-sm">
-                        <div><i class="fas fa-map-pin text-[#4FC3F7] mr-2"></i> Loja: Av. Luís Vieira, 596-A - Vila Pery</div>
-                        <div><i class="fas fa-industry text-[#4FC3F7] mr-2"></i> Fábrica: Rua Durvalino Guimarães de Almeida, 320</div>
-                    </div>
-                    <div class="mt-6 flex flex-wrap gap-4">
-                        <span class="bg-[#4FC3F7] text-[#0A3D62] px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-check-circle mr-1"></i> Registro INMETRO</span>
-                        <span class="bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-car mr-1"></i> Nacionais & Importados</span>
-                        <span class="bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-clock mr-1"></i> Atendimento ágil</span>
-                        <span class="bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-sofa mr-1"></i> Sala de espera</span>
-                    </div>
-                </div>
-                <div class="flex justify-center" data-aos="fade-left">
-                    <div class="w-full h-64 bg-gray-700 rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl">
-                        <img src="img/loja-equipe.jpg" alt="Loja N&N" class="w-full h-full object-cover" />
-                    </div>
-                </div>
-            </div>
-            <div class="mt-16 grid md:grid-cols-2 gap-8">
-                <div class="bg-[#1E4D7B] p-6 rounded-xl">
-                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-store text-[#4FC3F7] mr-2"></i> VISITE NOSSA LOJA</h3>
-                    <p class="text-gray-200">Av. Luís Vieira, 596-A - Vila Pery, Fortaleza - CE</p>
-                    <p class="text-gray-200"><i class="fas fa-phone mr-2"></i> (85) 3292-5645</p>
-                </div>
-                <div class="bg-[#1E4D7B] p-6 rounded-xl">
-                    <h3 class="text-xl font-semibold mb-2"><i class="fas fa-factory text-[#4FC3F7] mr-2"></i> CONHEÇA NOSSA FÁBRICA</h3>
-                    <p class="text-gray-200">Rua Durvalino Guimarães de Almeida, 320</p>
-                    <p class="text-gray-200"><i class="fas fa-phone mr-2"></i> (85) 3484-5315</p>
-                </div>
-            </div>
-            <div class="mt-8 rounded-xl overflow-hidden shadow-xl bg-[#1E4D7B] p-6 text-center">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Lu%C3%ADs+Vieira+596+A+Vila+Pery+Fortaleza+CE" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="inline-block bg-[#4FC3F7] text-[#0A3D62] font-semibold px-6 py-4 rounded-full text-lg transition hover:bg-[#38B0E3] shadow-lg">
-                    <i class="fas fa-map-pin mr-2"></i> Abrir no Google Maps
-                </a>
-                <p class="text-gray-300 mt-3 text-sm">Av. Luís Vieira, 596-A - Vila Pery, Fortaleza - CE</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FÁBRICA ===== -->
-    <section id="fabrica" class="py-20 px-6 bg-gray-100">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Nossa Fábrica</h2>
-            <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Da fábrica para o seu veículo – qualidade e precisão em cada peça</p>
-            <div class="grid md:grid-cols-2 gap-10 items-center">
-                <div data-aos="fade-right">
-                    <div class="rounded-2xl shadow-2xl overflow-hidden bg-gray-900">
-                        <video 
-                            poster="img/loja-estrutura.jpg" 
-                            autoplay 
-                            muted 
-                            loop 
-                            playsinline 
-                            controls
-                            class="w-full h-auto max-h-[400px] object-cover"
-                        >
-                            <source src="img/video-fabrica.mp4" type="video/mp4" />
-                            <img src="img/loja-estrutura.jpg" alt="Fábrica N&N" class="w-full" />
-                        </video>
-                    </div>
-                </div>
-                <div data-aos="fade-left">
-                    <h3 class="text-2xl font-bold text-[#0A3D62] mb-4">Tecnologia e experiência</h3>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        Nossos engates são projetados e fabricados em nossa própria unidade industrial, com máquinas modernas e equipamentos avançados, garantindo a mais alta qualidade da produção.
-                    </p>
-                    <ul class="space-y-2 text-gray-700">
-                        <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2"></i> Controle de qualidade INMETRO</li>
-                        <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2"></i> Matéria-prima de alta resistência</li>
-                        <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2"></i> Produção sob demanda e estoque próprio</li>
-                        <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2"></i> Fabricamos engates fixos e removíveis</li>
-                    </ul>
-                    <a href="#contato" class="mt-6 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white font-semibold px-6 py-3 rounded-full transition">
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#contato" class="bg-[#4FC3F7] hover:bg-[#38B0E3] text-[#0A3D62] font-semibold px-8 py-4 rounded-full text-lg transition shadow-lg">
                         Solicitar orçamento
+                    </a>
+                    <a href="#categorias" class="border border-white hover:bg-white hover:text-[#0A3D62] text-white font-semibold px-8 py-4 rounded-full text-lg transition">
+                        Ver modelos
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ===== CONTATO ===== -->
-    <section id="contato" class="py-20 px-6 bg-white">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Fale Conosco</h2>
-            <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Estamos prontos para atender você</p>
-            <div class="grid md:grid-cols-2 gap-10" data-aos="fade-up">
-                <div>
-                    <form id="contact-form" class="space-y-5">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Nome *</label>
-                            <input type="text" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">WhatsApp *</label>
-                            <input type="tel" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" placeholder="(85) 99999-9999" />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">Veículo / Modelo / Ano</label>
-                            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" placeholder="Ex: Hilux 2022" />
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700">O que você precisa?</label>
-                            <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" placeholder="Descreva sua necessidade..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-[#0A3D62] hover:bg-[#1E4D7B] text-white font-semibold py-3 rounded-lg transition shadow-lg">
-                            Enviar mensagem
-                        </button>
-                    </form>
+        <!-- ===== CATEGORIAS ===== -->
+        <section id="categorias" class="py-20 px-6 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-center mb-8">
+                    <span class="bg-[#4FC3F7] text-[#0A3D62] py-2 px-6 rounded-full text-sm font-bold flex items-center gap-2 shadow-md animate-pulse">
+                        <i class="fas fa-star" aria-hidden="true"></i> NOVIDADE EM ESTOQUE: Acessórios para sua carroça!
+                    </span>
                 </div>
-                <div class="space-y-6">
-                    <div>
-                        <h3 class="text-xl font-bold text-[#0A3D62]"><i class="fas fa-phone-alt text-[#4FC3F7] mr-3"></i> Telefones</h3>
-                        <p class="text-gray-700">Loja: (85) 3292-5645</p>
-                        <p class="text-gray-700">Fábrica: (85) 3484-5315</p>
-                        <p class="text-gray-700">WhatsApp: <strong class="text-[#0A3D62]">(85) 99987-4410</strong></p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-[#0A3D62]"><i class="fas fa-envelope text-[#4FC3F7] mr-3"></i> E-mail</h3>
-                        <p class="text-gray-700">mlmacedouchoa@gmail.com</p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-[#0A3D62]"><i class="fas fa-clock text-[#4FC3F7] mr-3"></i> Atendimento</h3>
-                        <p class="text-gray-700">Segunda a Sexta: 8h às 17h</p>
-                        <p class="text-gray-700">Sábado: 8h às 12h</p>
+                <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Encontre o engate para seu veículo</h2>
+                <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Selecione o modelo para consultar as opções disponíveis</p>
+                <div id="categories-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"></div>
+                <div id="category-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                    <div class="bg-white rounded-2xl p-8 max-w-lg w-full mx-4 relative max-h-[80vh] overflow-y-auto">
+                        <button id="close-modal" type="button" class="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl" aria-label="Fechar">&times;</button>
+                        <h3 id="modal-title" class="text-2xl font-bold mb-4 text-[#0A3D62]">Produtos</h3>
+                        <ul id="modal-products" class="space-y-4 text-gray-700"></ul>
+                        <div class="mt-6 text-center text-sm text-gray-500">
+                            <i class="fas fa-info-circle text-[#4FC3F7] mr-1" aria-hidden="true"></i> Informe o ano/modelo do veículo para confirmar a aplicação.
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- ===== DESTAQUES ===== -->
+        <section id="destaques" class="py-20 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Produtos em Destaque</h2>
+                <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Os mais procurados pelos nossos clientes</p>
+                <div id="destaques-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"></div>
+            </div>
+        </section>
+
+        <!-- ===== ACESSÓRIOS ===== -->
+        <section id="acessorios" class="py-20 px-6 bg-gray-100">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Acessórios</h2>
+                <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Complementos para seu veículo – qualidade N&N</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="w-full h-48 bg-gray-100 overflow-hidden">
+                            <img src="img/produtos/camboes/cambao-jipe.jpg" alt="Cambão para Jipe" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-[#0A3D62]">Cambão para Jipe</h3>
+                            <p class="text-gray-600 text-sm mt-1">Reboque reforçado, ideal para trilhas</p>
+                            <a href="https://wa.me/5585999874410?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20N%26N%20Engates%20e%20gostaria%20de%20consultar%20o%20produto%3A%20Camb%C3%A3o%20para%20Jipe.%20Meu%20ve%C3%ADculo%20%C3%A9%3A" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm transition">Consultar produto</a>
+                        </div>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-full h-48 bg-gray-100 overflow-hidden">
+                            <img src="img/produtos/inox/kit-inox.jpg" alt="Kit Inox" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-[#0A3D62]">Kit Inox</h3>
+                            <p class="text-gray-600 text-sm mt-1">Acabamento premium, resistente à corrosão</p>
+                            <a href="https://wa.me/5585999874410?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20N%26N%20Engates%20e%20gostaria%20de%20consultar%20o%20produto%3A%20Kit%20Inox.%20Meu%20ve%C3%ADculo%20%C3%A9%3A" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm transition">Consultar produto</a>
+                        </div>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-full h-48 bg-gray-100 overflow-hidden">
+                            <img src="img/produtos/estribos/estribo-aluminio.jpg" alt="Estribo de Alumínio" class="w-full h-full object-cover object-center" loading="lazy" decoding="async" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-[#0A3D62]">Estribo de Alumínio</h3>
+                            <p class="text-gray-600 text-sm mt-1">Leve e resistente, para diversos modelos</p>
+                            <a href="https://wa.me/5585999874410?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20N%26N%20Engates%20e%20gostaria%20de%20consultar%20o%20produto%3A%20Estribo%20de%20Alum%C3%ADnio.%20Meu%20ve%C3%ADculo%20%C3%A9%3A" target="_blank" rel="noopener noreferrer" class="mt-3 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm transition">Consultar produto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOBRE ===== -->
+        <section id="sobre" class="py-20 px-6 bg-[#0A3D62] text-white">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl font-bold mb-6">Sobre a N&N Engates</h2>
+                        <p class="text-gray-200 leading-relaxed mb-4">
+                            <strong class="text-[#4FC3F7]">Desde 1999</strong>, a N&N constrói sua história no mercado de engates e acessórios automotivos.
+                            Somos referência na fabricação para veículos nacionais e importados, com produtos registrados no <strong class="text-[#4FC3F7]">INMETRO</strong> (nº 001718/2024) e rigoroso controle de qualidade.
+                        </p>
+                        <p class="text-gray-200 leading-relaxed mb-6">
+                            Atendemos com excelência, oferecendo desde engates fixos e removíveis até acessórios para carroças e soluções elétricas.
+                            Temos <strong class="text-[#4FC3F7]">sala de espera</strong> para nossos clientes e uma equipe preparada para orientar na melhor escolha.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 text-sm">
+                            <div><i class="fas fa-map-pin text-[#4FC3F7] mr-2" aria-hidden="true"></i> Loja: Av. Luís Vieira, 596-A - Vila Pery</div>
+                            <div><i class="fas fa-industry text-[#4FC3F7] mr-2" aria-hidden="true"></i> Fábrica: Rua Durvalino Guimarães de Almeida, 320</div>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-4">
+                            <span class="bg-[#4FC3F7] text-[#0A3D62] px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-check-circle mr-1" aria-hidden="true"></i> Registro INMETRO</span>
+                            <span class="bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-car mr-1" aria-hidden="true"></i> Nacionais &amp; Importados</span>
+                            <span class="bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-clock mr-1" aria-hidden="true"></i> Atendimento ágil</span>
+                            <span class="bg-[#1E4D7B] text-white px-4 py-2 rounded-full text-sm font-semibold"><i class="fas fa-sofa mr-1" aria-hidden="true"></i> Sala de espera</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center" data-aos="fade-left">
+                        <div class="w-full h-64 bg-gray-700 rounded-2xl flex items-center justify-center overflow-hidden shadow-2xl">
+                            <img src="img/loja-equipe.jpg" alt="Loja N&N" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-16 grid md:grid-cols-2 gap-8">
+                    <div class="bg-[#1E4D7B] p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2"><i class="fas fa-store text-[#4FC3F7] mr-2" aria-hidden="true"></i> VISITE NOSSA LOJA</h3>
+                        <p class="text-gray-200">Av. Luís Vieira, 596-A - Vila Pery, Fortaleza - CE</p>
+                        <p class="text-gray-200"><i class="fas fa-phone mr-2" aria-hidden="true"></i> (85) 3292-5645</p>
+                    </div>
+                    <div class="bg-[#1E4D7B] p-6 rounded-xl">
+                        <h3 class="text-xl font-semibold mb-2"><i class="fas fa-factory text-[#4FC3F7] mr-2" aria-hidden="true"></i> CONHEÇA NOSSA FÁBRICA</h3>
+                        <p class="text-gray-200">Rua Durvalino Guimarães de Almeida, 320</p>
+                        <p class="text-gray-200"><i class="fas fa-phone mr-2" aria-hidden="true"></i> (85) 3484-5315</p>
+                    </div>
+                </div>
+                <div class="mt-8 rounded-xl overflow-hidden shadow-xl bg-[#1E4D7B] p-6 text-center">
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Lu%C3%ADs+Vieira+596+A+Vila+Pery+Fortaleza+CE"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="inline-block bg-[#4FC3F7] text-[#0A3D62] font-semibold px-6 py-4 rounded-full text-lg transition hover:bg-[#38B0E3] shadow-lg">
+                        <i class="fas fa-map-pin mr-2" aria-hidden="true"></i> Abrir no Google Maps
+                    </a>
+                    <p class="text-gray-300 mt-3 text-sm">Av. Luís Vieira, 596-A - Vila Pery, Fortaleza - CE</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FÁBRICA ===== -->
+        <section id="fabrica" class="py-20 px-6 bg-gray-100">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Nossa Fábrica</h2>
+                <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Da fábrica para o seu veículo – qualidade e precisão em cada peça</p>
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div data-aos="fade-right">
+                        <div class="rounded-2xl shadow-2xl overflow-hidden bg-gray-900">
+                            <video
+                                poster="img/loja-estrutura.jpg"
+                                autoplay
+                                muted
+                                loop
+                                playsinline
+                                controls
+                                preload="metadata"
+                                class="w-full h-auto max-h-[400px] object-cover"
+                            >
+                                <source src="img/video-fabrica.mp4" type="video/mp4" />
+                                <img src="img/loja-estrutura.jpg" alt="Fábrica N&N" class="w-full" loading="lazy" decoding="async" />
+                            </video>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <h3 class="text-2xl font-bold text-[#0A3D62] mb-4">Tecnologia e experiência</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Nossos engates são projetados e fabricados em nossa própria unidade industrial, com máquinas modernas e equipamentos avançados, garantindo a mais alta qualidade da produção.
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2" aria-hidden="true"></i> Controle de qualidade INMETRO</li>
+                            <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2" aria-hidden="true"></i> Matéria-prima de alta resistência</li>
+                            <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2" aria-hidden="true"></i> Produção sob demanda e estoque próprio</li>
+                            <li><i class="fas fa-check-circle text-[#4FC3F7] mr-2" aria-hidden="true"></i> Fabricamos engates fixos e removíveis</li>
+                        </ul>
+                        <a href="#contato" class="mt-6 inline-block bg-[#0A3D62] hover:bg-[#1E4D7B] text-white font-semibold px-6 py-3 rounded-full transition">
+                            Solicitar orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTATO ===== -->
+        <section id="contato" class="py-20 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-center mb-4 text-[#0A3D62]" data-aos="fade-up">Fale Conosco</h2>
+                <p class="text-center text-gray-600 mb-12" data-aos="fade-up" data-aos-delay="100">Estamos prontos para atender você</p>
+                <div class="grid md:grid-cols-2 gap-10" data-aos="fade-up">
+                    <div>
+                        <form id="contact-form" class="space-y-5">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-gray-700">Nome *</label>
+                                <input type="text" id="contact-name" name="nome" required autocomplete="name" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" />
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-medium text-gray-700">WhatsApp *</label>
+                                <input type="tel" id="contact-phone" name="telefone" required autocomplete="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" placeholder="(85) 99999-9999" />
+                            </div>
+                            <div>
+                                <label for="contact-vehicle" class="block text-sm font-medium text-gray-700">Veículo / Modelo / Ano</label>
+                                <input type="text" id="contact-vehicle" name="veiculo" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" placeholder="Ex: Hilux 2022" />
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-sm font-medium text-gray-700">O que você precisa?</label>
+                                <textarea id="contact-message" name="mensagem" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-[#4FC3F7] outline-none" placeholder="Descreva sua necessidade..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-[#0A3D62] hover:bg-[#1E4D7B] text-white font-semibold py-3 rounded-lg transition shadow-lg">
+                                Enviar mensagem
+                            </button>
+                        </form>
+                    </div>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0A3D62]"><i class="fas fa-phone-alt text-[#4FC3F7] mr-3" aria-hidden="true"></i> Telefones</h3>
+                            <p class="text-gray-700">Loja: (85) 3292-5645</p>
+                            <p class="text-gray-700">Fábrica: (85) 3484-5315</p>
+                            <p class="text-gray-700">WhatsApp: <strong class="text-[#0A3D62]">(85) 99987-4410</strong></p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0A3D62]"><i class="fas fa-envelope text-[#4FC3F7] mr-3" aria-hidden="true"></i> E-mail</h3>
+                            <p class="text-gray-700">mlmacedouchoa@gmail.com</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0A3D62]"><i class="fas fa-clock text-[#4FC3F7] mr-3" aria-hidden="true"></i> Atendimento</h3>
+                            <p class="text-gray-700">Segunda a Sexta: 8h às 17h</p>
+                            <p class="text-gray-700">Sábado: 8h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <!-- ===== RODAPÉ ===== -->
     <footer class="bg-[#0A3D62] text-gray-300 py-8 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center gap-2">
-                <img src="img/logo-nn.png" alt="N&N Engates" class="h-8 w-auto" />
+                <img src="img/logo-nn.png" alt="N&N Engates" class="h-8 w-auto" loading="lazy" decoding="async" />
                 <span class="text-lg font-bold text-white">N&N <span class="text-[#4FC3F7]">ENGATES</span></span>
             </div>
             <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="https://instagram.com/nnengate" target="_blank" class="hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="https://wa.me/5585999874410" target="_blank" class="hover:text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
-                <a href="mailto:mlmacedouchoa@gmail.com" class="hover:text-white"><i class="fas fa-envelope fa-lg"></i></a>
+                <a href="https://instagram.com/nnengate" target="_blank" rel="noopener noreferrer" class="hover:text-white" aria-label="Instagram"><i class="fab fa-instagram fa-lg" aria-hidden="true"></i></a>
+                <a href="https://wa.me/5585999874410" target="_blank" rel="noopener noreferrer" class="hover:text-white" aria-label="WhatsApp"><i class="fab fa-whatsapp fa-lg" aria-hidden="true"></i></a>
+                <a href="mailto:mlmacedouchoa@gmail.com" class="hover:text-white" aria-label="E-mail"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a>
             </div>
             <p class="text-sm mt-4 md:mt-0">&copy; 2026 N&N Engates - Todos os direitos reservados</p>
         </div>
     </footer>
 
     <!-- ===== WHATSAPP FLUTUANTE ===== -->
-    <a href="https://wa.me/5585999874410?text=Olá!%20Gostaria%20de%20um%20orçamento" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 whatsapp-float">
-        <i class="fab fa-whatsapp fa-2x"></i>
+    <a href="https://wa.me/5585999874410?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 whatsapp-float" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i>
     </a>
 
     <!-- ===== CHAT ===== -->
     <div id="chat-widget" class="fixed bottom-24 right-6 z-50 flex flex-col items-end">
-        <div id="chat-box">
+        <div id="chat-box" role="dialog" aria-label="Chat com assistente N&N" aria-hidden="true">
             <div class="bg-[#0A3D62] text-white p-3 flex justify-between items-center">
-                <span class="font-semibold"><i class="fas fa-robot mr-2"></i> Assistente N&N</span>
-                <button id="chat-close" class="text-white hover:text-gray-200">&times;</button>
+                <span class="font-semibold"><i class="fas fa-robot mr-2" aria-hidden="true"></i> Assistente N&N</span>
+                <button id="chat-close" type="button" class="text-white hover:text-gray-200" aria-label="Fechar chat">&times;</button>
             </div>
-            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-2 bg-gray-50">
-                <div class="chat-message-bot p-3 max-w-[80%] text-sm">Olá! Sou o assistente da N&N Engates. Pergunte sobre modelos, preços ou horários.</div>
+            <div id="chat-messages" class="flex flex-col flex-1 p-4 overflow-y-auto gap-2 bg-gray-50" aria-live="polite">
+                <div class="chat-message-bot p-3 max-w-[80%] text-sm">Olá! Sou o assistente da N&N Engates. Como posso ajudar?</div>
             </div>
             <div class="p-3 border-t border-gray-200 flex">
-                <input id="chat-input" type="text" placeholder="Digite sua pergunta..." class="flex-1 border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4FC3F7]" />
-                <button id="chat-send" class="bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 rounded-r-lg transition">
-                    <i class="fas fa-paper-plane"></i>
+                <label for="chat-input" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Digite sua pergunta</label>
+                <input id="chat-input" type="text" maxlength="500" placeholder="Digite sua pergunta..." class="flex-1 border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4FC3F7]" autocomplete="off" />
+                <button id="chat-send" type="button" class="bg-[#0A3D62] hover:bg-[#1E4D7B] text-white px-4 rounded-r-lg transition" aria-label="Enviar mensagem">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
-        <button id="chat-toggle" class="bg-[#0A3D62] hover:bg-[#1E4D7B] text-white p-4 rounded-full shadow-lg transition">
-            <i class="fas fa-comment-dots fa-2x"></i>
+        <button id="chat-toggle" type="button" class="bg-[#0A3D62] hover:bg-[#1E4D7B] text-white p-4 rounded-full shadow-lg transition" aria-label="Abrir chat" aria-controls="chat-box" aria-expanded="false">
+            <i class="fas fa-comment-dots fa-2x" aria-hidden="true"></i>
         </button>
     </div>
 
