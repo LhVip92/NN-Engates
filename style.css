@@ -9,7 +9,7 @@
 
 html, body {
     max-width: 100%;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
     background-color: #0A3D62;
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
@@ -32,21 +32,11 @@ p { font-size: 1.125rem; line-height: 1.6; }
 /* ===== SEÇÕES ===== */
 section {
     padding: 4rem 1.5rem;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-}
-
-/* ===== PROTEÇÃO CONTRA OVERFLOW ===== */
-section, .container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl,
-.w-full, .h-screen, .min-h-screen {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
 }
 
 /* ===== IMAGENS E VÍDEOS ===== */
 img, video, iframe {
-    max-width: 100% !important;
-    height: auto !important;
+    max-width: 100%;
     display: block;
 }
 
@@ -130,11 +120,6 @@ img, video, iframe {
 .product-card:hover {
     transform: scale(1.02);
     box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-}
-.product-card .price {
-    color: var(--azul-profundo);
-    font-weight: 700;
-    font-size: 1.25rem;
 }
 
 /* ===== MENU MOBILE ===== */
