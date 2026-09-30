@@ -1,0 +1,159 @@
+/* style.css - N&N Engates - Identidade azul */
+
+/* ===== RESET E SEGURANÇA ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+    background-color: #0A3D62;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ===== VARIÁVEIS ===== */
+:root {
+    --azul-profundo: #0A3D62;
+    --azul-medio: #1E4D7B;
+    --azul-claro: #4FC3F7;
+    --cinza-claro: #F7FAFC;
+}
+
+/* ===== TIPOGRAFIA ===== */
+h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; }
+h2 { font-size: 2rem; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.5rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; }
+p { font-size: 1.125rem; line-height: 1.6; }
+
+/* ===== SEÇÕES ===== */
+section {
+    padding: 4rem 1.5rem;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* ===== PROTEÇÃO CONTRA OVERFLOW ===== */
+section, .container, .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-4xl,
+.w-full, .h-screen, .min-h-screen {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* ===== IMAGENS E VÍDEOS ===== */
+img, video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+}
+
+/* ===== WHATSAPP FLUTUANTE ===== */
+.whatsapp-float {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ===== CHAT ===== */
+#chat-box {
+    transition: all 0.3s ease;
+    width: 320px;
+    max-width: 90vw;
+    height: 420px;
+    display: none;
+    flex-direction: column;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}
+#chat-box.active { display: flex; }
+
+.chat-message-user {
+    background: #E2E8F0;
+    align-self: flex-end;
+    border-radius: 16px 16px 4px 16px;
+}
+.chat-message-bot {
+    background: var(--azul-profundo);
+    color: white;
+    align-self: flex-start;
+    border-radius: 16px 16px 16px 4px;
+}
+
+/* ===== CARDS DE CATEGORIAS ===== */
+.category-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 1px solid #E2E8F0;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -10px rgba(10,61,98,0.15);
+}
+.category-card i {
+    color: var(--azul-profundo);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.category-card h3 {
+    color: var(--azul-profundo);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.category-card span {
+    font-size: 0.8rem;
+    color: #718096;
+}
+
+/* ===== CARDS DE PRODUTOS ===== */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #F7FAFC;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+}
+.product-card .price {
+    color: var(--azul-profundo);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+/* ===== MENU MOBILE ===== */
+#mobile-menu {
+    display: none;
+}
+#mobile-menu.open {
+    display: block;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 640px) {
+    #chat-box {
+        width: calc(100vw - 2rem);
+        right: 1rem;
+        bottom: 80px;
+        height: 380px;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    section { padding: 2rem 1rem; }
+}
